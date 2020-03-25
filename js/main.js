@@ -1,6 +1,6 @@
 $(document).ready(function () {
    
-    for (let i = 15; i < 51; i++) {
+    for (let i = 15; i < 79; i++) {
 
         let result = 'calc(14px + ' + (100 * (i-14)) / window.innerWidth + 'vw)';
         $('<p>', { text: i, class: 'item_number' }).appendTo('#size_number');
@@ -8,17 +8,20 @@ $(document).ready(function () {
         
     };
 
-    for (let i = 11; i < 201; i++) {
+    for (let i = 11; i < 203; i++) {
 
         let result = 'calc(' + i/2 + 'px + ' + (100 * (i/2)) / window.innerWidth + 'vw)';
 
-        if (i < 106) {
+        if (i < 75) {
             $('<p>', { text: i, class: 'item_number' }).appendTo('#distance_number__left');
             $('<p>', { text: result, class: 'item_insert' }).appendTo('#distance_insert__left');
+        } else if ( i >= 75 && i < 139) {
+            $('<p>', { text: i, class: 'item_number' }).appendTo('#distance_number__central');
+            $('<p>', { text: result, class: 'item_insert' }).appendTo('#distance_insert__central');
         } else {
             $('<p>', { text: i, class: 'item_number' }).appendTo('#distance_number__right');
             $('<p>', { text: result, class: 'item_insert' }).appendTo('#distance_insert__right');
-        }
+        };
             
     };
 
@@ -40,24 +43,6 @@ $(document).ready(function () {
             rng.select();
         }
     });
-
-    // $('.item_insert').on('click',function(){
-    //     var code = document.querySelector('.item_insert'); // #text - блок из которого нужно скопировать
-    //     var range = document.createRange();
-    //     range.selectNode(code);
-    //     window.getSelection().addRange(range);
-      
-    //     try {
-    //       var successful = document.execCommand('copy');
-    //       var msg = successful?'удачно':'неудачно';
-    //       alert('Код скопирован '+msg);
-    //     } catch(err) {
-    //       alert('Код не скопирован автоматически :с'+'\n'+'Попробуйте вручную');
-    //     }
-    //     window.getSelection().removeAllRanges();
-    // });
-
-    
 
 });
 
