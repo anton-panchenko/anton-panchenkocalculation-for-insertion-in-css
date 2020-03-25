@@ -41,5 +41,23 @@ $(document).ready(function () {
         }
     });
 
+    // $('.item_insert').on('click',function(){
+    //     var code = document.querySelector('.item_insert'); // #text - блок из которого нужно скопировать
+    //     var range = document.createRange();
+    //     range.selectNode(code);
+    //     window.getSelection().addRange(range);
+      
+    //     try {
+    //       var successful = document.execCommand('copy');
+    //       var msg = successful?'удачно':'неудачно';
+    //       alert('Код скопирован '+msg);
+    //     } catch(err) {
+    //       alert('Код не скопирован автоматически :с'+'\n'+'Попробуйте вручную');
+    //     }
+    //     window.getSelection().removeAllRanges();
+    // });
+
+    
+
 });
 
