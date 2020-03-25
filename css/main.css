@@ -1,0 +1,114 @@
+body {
+  background-color: #2E4150;
+  color: #DBF1FF;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contaner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr 5fr);
+  grid-template-rows: 100px 50px 50px;
+  align-items: center;
+  justify-items: center ;
+  grid-template-areas: 
+  "t t t t t t" 
+  "ss ss ds ds ds ds" 
+  "snt sit dntl ditl dntr ditr"
+  "sn si dnl dil dnr dir";
+}
+
+.title {
+  grid-area: t;
+  color: #34A3DA;
+  font-size: calc(14px + 0.5208333333333334vw);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.colltitle {
+  color: #34A3DA;
+  font-size: calc(14px + 0.10416666666666667vw);
+  font-weight: 400;
+}
+
+.subtitle {
+  color: #14BE9A;
+  font-size: calc(14px + 0.20833333333333334vw);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.number {
+  color: #14BE9A;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.insert {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.size_subtitle {
+  grid-area: ss;
+}
+
+.size_number__title {
+  grid-area: snt;
+}
+
+.size_insert__title {
+  grid-area: sit;
+}
+
+.distance_subtitle {
+  grid-area: ds;
+}
+
+.distance_number__title_left {
+  grid-area: dntl;
+}
+
+.distance_insert__title_left {
+  grid-area: ditl;
+}
+
+.distance_number__title_right {
+  grid-area: dntr;
+}
+
+.distance_insert__title_right {
+  grid-area: ditr;
+}
+
+#size_number {
+  grid-area: sn;
+  align-self: start;
+}
+
+#size_insert {
+  grid-area: si;
+  align-self: start;
+}
+
+#distance_number__left {
+  grid-area: dnl;
+  align-self: start;
+}
+
+#distance_insert__left {
+  grid-area: dil;
+  align-self: start;
+}
+
+#distance_number__right {
+  grid-area: dnr;
+  align-self: start;
+}
+
+#distance_insert__right {
+  grid-area: dir;
+  align-self: start;
+}
