@@ -25,7 +25,14 @@ $(document).ready(function () {
             
     };
 
-    $('.item_insert').on('click',function() {//Вешаем на клик
+    $('.item_insert').on('click', function () {
+       
+        var $tmp = $("<input>");
+        $("body").append($tmp);
+        $tmp.val($(this).text()).select();
+        document.execCommand("copy");
+        $tmp.remove();
+
         var rng, sel;
         if ( document.createRange ) {//Не все браузеры поддерживают createRange 
             rng = document.createRange();//создаем объект область
@@ -41,8 +48,10 @@ $(document).ready(function () {
             var rng = document.body.createTextRange();
             rng.moveToElementText( this );
             rng.select();
-        }
+        };
+
     });
+  
 
 });
 
