@@ -34,17 +34,16 @@ $(document).ready(function () {
         $tmp.remove();
 
         var rng, sel;
-        if ( document.createRange ) {//Не все браузеры поддерживают createRange 
-            rng = document.createRange();//создаем объект область
-            rng.selectNode( this )//выберем текущий узел
-            sel = window.getSelection();//Получаем объект текущее выделение
-            var strSel = ''+sel; //Преобразуем в строку (ох уж js...)
-            if (!strSel.length) { //Если ничего не выделено
-                sel.removeAllRanges();//Очистим все выделения (на всякий случай) 
-                sel.addRange( rng ); //Выделим текущий узел
+        if ( document.createRange ) {
+            rng = document.createRange();
+            rng.selectNode( this );
+            sel = window.getSelection();
+            var strSel = ''+sel;
+            if (!strSel.length) {
+                sel.removeAllRanges();
+                sel.addRange( rng );
             }
-        } else {//Если браузер не поддерживает createRange (IE<9, например)
-            //Выделяем таким образом, уже без всяких проверок
+        } else {
             var rng = document.body.createTextRange();
             rng.moveToElementText( this );
             rng.select();
@@ -52,6 +51,5 @@ $(document).ready(function () {
 
     });
   
-
 });
 
